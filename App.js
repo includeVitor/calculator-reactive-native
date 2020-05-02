@@ -17,13 +17,20 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Button from './src/components/Button'
+import Display from './src/components/Display'
 
 
 
 const App: () => React$Node = () => {
+
+  state = {
+    displayValue: '0'
+  }
+
   return (
     <>
       <View style={styles.container}>
+        <Display value={this.state.displayValue} /> 
         <View style={styles.buttons}>
           <Button label='AC' />
           <Button label='/' />
